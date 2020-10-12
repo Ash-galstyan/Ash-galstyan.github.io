@@ -181,13 +181,13 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 68em;
+		/*width: 68em;*/
 	}
 
 		@media screen and (max-width: 1680px) {
 
 			.container {
-				width: 70em;
+				/*width: 70em;*/
 			}
 
 		}
@@ -195,7 +195,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.container {
-				width: 80%;
+				/*width: 80%;*/
 			}
 
 			.image img {
@@ -206,9 +206,9 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
-			.container {
-				width: calc(100% - 100px);
-			}
+			/*.container {*/
+			/*	width: calc(100% - 100px);*/
+			/*}*/
 
 		}
 
