@@ -2095,7 +2095,7 @@ input, select, textarea {
 		}
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 426px) {
 		#footer .feature-list h3:before {
 			left: 30px;
 		}
