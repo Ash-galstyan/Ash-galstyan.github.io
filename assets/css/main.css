@@ -179,8 +179,8 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 0 auto;
-		max-width: 100%;
+		/*margin: 0 auto;*/
+		/*max-width: 100%;*/
 		/*width: 68em;*/
 	}
 
@@ -767,7 +767,7 @@ input, select, textarea {
 		}
 
 		.tech-icon {
-			width: 2.3em;
+			width: 2.6em;
 		}
 
 /* Box */
@@ -2092,5 +2092,11 @@ input, select, textarea {
 	@media screen and (max-width: 613px) {
 		.my-image {
 			max-width: 35%;
+		}
+	}
+
+	@media (max-width: 360px) {
+		#footer .feature-list h3:before {
+			left: 30px;
 		}
 	}
