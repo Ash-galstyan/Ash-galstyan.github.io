@@ -113,40 +113,46 @@
 
 	var form = $('#contact-form');
 	var formMessage = $('#contact-message');
+	var formStatus = $('#status');
+	var button = $('#btnSubmit');
 
-	$('#submitForm').submit(function(event) {
+	form.submit(function(event) {
 		event.preventDefault();
 
-		var formData = $(form).serialize();
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		}).done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessage).removeClass('error');
-			$(formMessage).addClass('success');
+		form.validate({
+			rules: {
+				name: 'required',
+				email: {
+					required: true,
+					email: true
+				},
+				message: 'required'
+			},
+			submitHandler: function(form) {
+				form.submit();
 
-			// Set the message text.
-			$(formMessage).text(response);
-
-			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
-		}).fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessage).removeClass('success');
-			$(formMessage).addClass('error');
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessage).text(data.responseText);
-			} else {
-				$(formMessage).text('Oops! An error occured and your message could not be sent.');
+				var formData = $(form).serialize();
+				$ajax({
+					url: $(form).attr('action'),
+					method: 'POST',
+					dataType: 'json',
+					data: formData,
+					success,
+					error
+				});
 			}
 		});
 	});
+
+	function success() {
+		form.reset();
+		button.style = "display: none ";
+		formStatus.innerHTML = "Thanks!";
+	}
+
+	function error() {
+		formStatus.innerHTML = "There was a problem.";
+	}
 
 		// Animate projects
 
