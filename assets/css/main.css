@@ -257,7 +257,7 @@ input, select, textarea {
 
 	section > :last-child,
 	article > :last-child,
-	section:last-child,
+	/*section:last-child,*/
 	article:last-child {
 		margin-bottom: 0;
 	}
@@ -732,6 +732,14 @@ input, select, textarea {
 				margin-top: -0.5em;
 			}
 
+			/*.feature-list h3.fa-comment:before {*/
+			/*	left: 0;*/
+			/*}*/
+
+			/*.feature-list h3.fa-envelope:before {*/
+			/*	left: 5px;*/
+			/*}*/
+
 		.feature-list.small section {
 			padding-left: 3.5em;
 		}
@@ -778,7 +786,7 @@ input, select, textarea {
 		}
 
 		.tech-icon {
-			width: 2.6em;
+			width: 2.3em;
 		}
 
 /* Box */

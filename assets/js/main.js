@@ -97,7 +97,7 @@
 	});
 
 	var introCounter = 0;
-	var introText = "Hi, I'm Ashot Galstyan";
+	var introText = "Hi, I'm Ashot Galstian";
 	var speed = 50;
 	function typeWriter() {
 		if (introCounter < introText.length) {
