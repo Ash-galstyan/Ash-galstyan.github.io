@@ -786,7 +786,8 @@ input, select, textarea {
 		}
 
 		.tech-icon {
-			width: 2.3em;
+			width: 42px;
+			height: 42px;
 		}
 
 /* Box */
